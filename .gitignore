@@ -1,3 +1,5 @@
 ###> docker ###
 .docker/data/*
 ###< docker ###
+# local cartoon build scratch (keep published player only)
+dhul-qarnayn-cartoon/
