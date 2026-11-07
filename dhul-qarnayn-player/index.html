@@ -3,103 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>قصة ذي القرنين — مع الصوت</title>
+  <title>قصة ذي القرنين — شخصيات 3D</title>
   <style>
     :root { --bg:#0c1c24; --teal:#1f5c63; --gold:#d4a84b; --sand:#f3ebe0; }
     * { box-sizing: border-box; }
     body {
       margin: 0; min-height: 100vh; display: grid; place-items: center;
       background: radial-gradient(900px 500px at 50% 0%, #2a6a72, var(--bg) 60%);
-      color: var(--sand); font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", sans-serif;
+      color: var(--sand); font-family: "Segoe UI", Tahoma, sans-serif;
       padding: 1rem;
     }
     .wrap { width: min(960px, 100%); }
-    h1 { margin: 0 0 .4rem; font-size: clamp(1.2rem, 3vw, 1.7rem); text-align: center; }
+    h1 { margin: 0 0 .35rem; font-size: clamp(1.2rem, 3vw, 1.7rem); text-align: center; }
     .sub { text-align: center; opacity: .85; margin-bottom: .9rem; }
-    .stage {
-      background: #000; border-radius: 1rem; overflow: hidden;
-      aspect-ratio: 16/9; position: relative;
-    }
-    video { width: 100%; height: 100%; display: block; background: #000; }
-    .row {
-      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
-      margin-top: 1rem;
-    }
+    .stage { background:#000; border-radius:1rem; overflow:hidden; aspect-ratio:16/9; }
+    video { width:100%; height:100%; display:block; background:#000; }
+    .row { display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; margin-top:1rem; }
     button, a.btn {
-      appearance: none; border: 0; border-radius: .9rem; padding: .85rem 1.2rem;
-      background: var(--teal); color: #fff; font-size: 1.05rem; cursor: pointer;
-      text-decoration: none; display: inline-flex; align-items: center;
+      appearance:none; border:0; border-radius:.9rem; padding:.85rem 1.2rem;
+      background:var(--teal); color:#fff; font-size:1.05rem; cursor:pointer;
+      text-decoration:none; display:inline-flex; align-items:center;
     }
-    button.gold { background: var(--gold); color: #1a1205; font-weight: 800; font-size: 1.15rem; }
-    button.secondary, a.secondary { background: rgba(255,255,255,.14); }
-    .status { margin-top: .75rem; text-align: center; color: var(--gold); min-height: 1.5rem; }
-    .note { margin-top: 1rem; text-align: center; line-height: 1.75; opacity: .9; }
-    audio { width: 100%; margin-top: .8rem; }
+    button.gold { background:var(--gold); color:#1a1205; font-weight:800; font-size:1.15rem; }
+    button.secondary, a.secondary { background:rgba(255,255,255,.14); }
+    .status { margin-top:.75rem; text-align:center; color:var(--gold); min-height:1.5rem; }
+    .note { margin-top:1rem; text-align:center; line-height:1.75; opacity:.9; }
+    audio { width:100%; margin-top:.8rem; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>قصة ذي القرنين</h1>
-    <p class="sub">سورة الكهف — كرتون متحرك مع تعليق صوتي</p>
+    <h1>قصة ذي القرنين — شخصيات 3D</h1>
+    <p class="sub">الأم والابن بنفس الموديل · حوار صوتي</p>
     <div class="stage">
       <video id="v" playsinline preload="auto" controls>
-        <source src="qissat_WITH_SOUND.mp4" type="video/mp4" />
-        <source src="qissat_WITH_SOUND.webm" type="video/webm" />
+        <source src="family_3d_dhil_qarnayn.mp4" type="video/mp4" />
       </video>
     </div>
-    <p class="status" id="status">اضغط الزر الذهبي لتشغيل الصوت</p>
+    <p class="status" id="status">اضغط الزر الذهبي للتشغيل مع الصوت</p>
     <div class="row">
-      <button class="gold" id="go" type="button">▶ تشغيل الفيديو مع الصوت الآن</button>
-      <button class="secondary" id="audioOnly" type="button">تشغيل الصوت فقط</button>
-      <a class="btn secondary" href="qissat_dhil_qarnayn_AUDIO_ONLY.mp3" download>تنزيل MP3</a>
-      <a class="btn secondary" href="qissat_WITH_SOUND.mp4" download>تنزيل الفيديو</a>
+      <button class="gold" id="go" type="button">▶ تشغيل مع الصوت</button>
+      <button class="secondary" id="audioOnly" type="button">الصوت فقط</button>
+      <a class="btn secondary" href="family_3d_dhil_qarnayn.mp4" download>تحميل الفيديو 3D</a>
+      <a class="btn secondary" href="family_3d_AUDIO.mp3" download>تحميل الصوت MP3</a>
     </div>
-    <audio id="a" controls preload="auto" src="qissat_dhil_qarnayn_AUDIO_ONLY.mp3"></audio>
+    <audio id="a" controls preload="auto" src="family_3d_AUDIO.mp3"></audio>
     <p class="note">
-      هذه الصفحة خارج محادثة Cursor حتى يعمل الصوت في المتصفح.
-      إذا لم تسمع شيئًا: تأكد أن هاتفك/سماعة الرأس غير صامتة، ثم اضغط الزر الذهبي.
+      للتحميل المباشر أيضًا من GitHub بعد رفع التحديث.
+      معاينة الشات قد تكتم الصوت — استخدم هذه الصفحة أو حمّل الملف.
     </p>
   </div>
   <script>
     const v = document.getElementById("v");
     const a = document.getElementById("a");
     const status = document.getElementById("status");
-    let mode = "video"; // or audio
-
-    function loud(el) {
-      el.muted = false;
-      el.defaultMuted = false;
-      el.volume = 1;
-      el.removeAttribute("muted");
-    }
-
-    async function playVideo() {
-      mode = "video";
-      a.pause();
-      loud(v);
-      try {
-        await v.play();
-        status.textContent = "يعمل… إن لم تسمع صوتًا اضغط «تشغيل الصوت فقط» أو ارفع صوت الجهاز";
-      } catch (e) {
-        status.textContent = "المتصفح منع التشغيل — اضغط الزر مرة أخرى أو شغّل شريط الصوت بالأسفل";
-      }
-    }
-
-    async function playAudioOnly() {
-      mode = "audio";
-      v.pause();
-      loud(a);
-      try {
-        a.currentTime = 0;
-        await a.play();
-        status.textContent = "الصوت فقط يعمل الآن من الشريط بالأسفل";
-      } catch (e) {
-        status.textContent = "حمّل ملف MP3 وشغّله من الملفات";
-      }
-    }
-
-    document.getElementById("go").addEventListener("click", playVideo);
-    document.getElementById("audioOnly").addEventListener("click", playAudioOnly);
+    function loud(el){ el.muted=false; el.defaultMuted=false; el.volume=1; el.removeAttribute("muted"); }
+    document.getElementById("go").onclick = async () => {
+      a.pause(); loud(v);
+      try { await v.play(); status.textContent = "يعمل… ارفع صوت الجهاز إن لزم"; }
+      catch { status.textContent = "اضغط مرة أخرى أو استخدم شريط الصوت"; }
+    };
+    document.getElementById("audioOnly").onclick = async () => {
+      v.pause(); loud(a); a.currentTime=0;
+      try { await a.play(); status.textContent = "الصوت يعمل من الشريط"; }
+      catch { status.textContent = "حمّل ملف MP3"; }
+    };
     v.addEventListener("play", () => loud(v));
   </script>
 </body>
